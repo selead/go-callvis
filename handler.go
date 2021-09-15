@@ -65,4 +65,3 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	log.Println("serving file:", img)
 	http.ServeFile(w, r, img)
 }
-

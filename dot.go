@@ -15,11 +15,11 @@ import (
 )
 
 var (
-	minlen  uint
-	nodesep float64
+	minlen    uint
+	nodesep   float64
 	nodeshape string
 	nodestyle string
-	rankdir string
+	rankdir   string
 )
 
 // location of dot executable for converting from .dot to .svg

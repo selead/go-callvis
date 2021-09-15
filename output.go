@@ -148,7 +148,7 @@ func printOutput(
 
 		posCaller := prog.Fset.Position(caller.Func.Pos())
 		posCallee := prog.Fset.Position(callee.Func.Pos())
-		posEdge   := prog.Fset.Position(edge.Pos())
+		posEdge := prog.Fset.Position(edge.Pos())
 		//fileCaller := fmt.Sprintf("%s:%d", posCaller.Filename, posCaller.Line)
 		filenameCaller := filepath.Base(posCaller.Filename)
 
@@ -208,11 +208,11 @@ func printOutput(
 
 		var sprintNode = func(node *callgraph.Node, isCaller bool) *dotNode {
 			// only once
-			key         := node.Func.String()
+			key := node.Func.String()
 			nodeTooltip := ""
 
-			fileCaller  := fmt.Sprintf("%s:%d", filepath.Base(posCaller.Filename), posCaller.Line)
-			fileCallee  := fmt.Sprintf("%s:%d", filepath.Base(posCallee.Filename), posCallee.Line)
+			fileCaller := fmt.Sprintf("%s:%d", filepath.Base(posCaller.Filename), posCaller.Line)
+			fileCallee := fmt.Sprintf("%s:%d", filepath.Base(posCallee.Filename), posCallee.Line)
 
 			if isCaller {
 				nodeTooltip = fmt.Sprintf("%s | defined in %s", node.Func.String(), fileCaller)
@@ -427,11 +427,11 @@ func printOutput(
 		Nodes:   nodes,
 		Edges:   edges,
 		Options: map[string]string{
-			"minlen":  fmt.Sprint(minlen),
-			"nodesep": fmt.Sprint(nodesep),
+			"minlen":    fmt.Sprint(minlen),
+			"nodesep":   fmt.Sprint(nodesep),
 			"nodeshape": fmt.Sprint(nodeshape),
 			"nodestyle": fmt.Sprint(nodestyle),
-			"rankdir": fmt.Sprint(rankdir),
+			"rankdir":   fmt.Sprint(rankdir),
 		},
 	}
 
